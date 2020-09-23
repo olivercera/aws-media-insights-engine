@@ -6,7 +6,7 @@
       variant="dark"
     >
       <b-navbar-brand to="/">
-        AWS Content Analysis
+        AWS Content Analysis (Oliver was here)
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
 
@@ -27,6 +27,12 @@
             :class="{ active: isCollectionActive }"
           >
             Collection
+          </b-nav-item>
+           <b-nav-item
+            to="/advanced"
+            :class="{ active: isAdvancedActive }"
+          >
+            Advanced Search
           </b-nav-item>
           <b-nav-item
             href="" @click.stop.prevent="openWindow('https://github.com/awslabs/aws-media-insights-engine/blob/master/IMPLEMENTATION_GUIDE.md')"
@@ -53,7 +59,7 @@ import { AmplifyEventBus } from "aws-amplify-vue";
 
 export default {
   name: 'Header',
-  props: ['isCollectionActive', 'isUploadActive'],
+  props: ['isCollectionActive', 'isUploadActive', 'isAdvancedActive'],
   data() {
     return {
       signedIn: false

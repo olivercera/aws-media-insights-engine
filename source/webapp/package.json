@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --no-fix",
-    "deploy": "aws s3 sync --acl public-read --profile mie --delete dist/ s3://[your_website_bucket]"
+    "deploy": "aws s3 sync --acl public-read --profile mie --delete dist/ s3://[your_website_bucket]",
+    "deploy-nat": "aws s3 sync --acl public-read --profile newagetechie --delete dist/ s3://mie-ocera-mediainsightswebapp-19xnu7jvqfi8z-website"
   },
   "dependencies": {
     "aws-amplify": "^1.3.3",
